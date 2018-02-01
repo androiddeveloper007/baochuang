@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ripple_item_clicked"
+        android:paddingBottom="@dimen/dimen_5"
+        android:paddingLeft="@dimen/dimen_6"
+        android:paddingRight="0dp"
+        android:paddingTop="@dimen/dimen_5" >
+
+        <TextView
+            android:id="@+id/tv_all_order_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/dimen_5"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:text=""
+            android:textColor="@color/font_black_1"
+            android:textSize="@dimen/dimen_12"/>
+
+        <TextView
+            android:id="@+id/tv_all_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="@dimen/dimen_5"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:text=""
+            android:textColor="@color/app"
+            android:textSize="@dimen/dimen_15"/>
+        <View android:layout_width="match_parent"
+              android:layout_height="1px"
+              android:layout_below="@+id/tv_all_order_time"
+              android:layout_marginLeft="@dimen/dimen_3"
+              android:layout_marginRight="@dimen/dimen_3"
+              android:layout_marginTop="@dimen/dimen_5"
+              android:background="@color/font_black_5" />
+        <TextView
+            android:id="@+id/tv_all_store"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_all_order_time"
+            android:layout_marginLeft="@dimen/dimen_6"
+            android:layout_marginTop="@dimen/dimen_15"
+            android:text=""
+            android:textColor="@color/font_black_1"
+            android:textSize="@dimen/dimen_15"/>
+
+        <TextView
+            android:id="@+id/tv_all_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_all_store"
+            android:layout_marginLeft="@dimen/dimen_6"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:text=""
+            android:textColor="@color/font_black_3"
+            android:textSize="@dimen/dimen_11.5"/>
+        <TextView
+            android:id="@+id/tv_all_seriesandrange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_all_address"
+            android:layout_marginLeft="@dimen/dimen_6"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:text=""
+            android:textColor="@color/font_black_1"
+            android:textSize="@dimen/dimen_14"/>
+        <TextView
+            android:id="@+id/tv_all_endtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_all_seriesandrange"
+            android:layout_marginLeft="@dimen/dimen_6"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:layout_marginBottom="@dimen/dimen_7"
+            android:text=""
+            android:textColor="@color/font_black_1"
+            android:textSize="@dimen/dimen_14"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1.5"
+        android:background="@color/font_black_6"
+        android:layout_marginRight="@dimen/dimen_5"
+        android:layout_marginLeft="@dimen/dimen_5"/>
+
+</LinearLayout>

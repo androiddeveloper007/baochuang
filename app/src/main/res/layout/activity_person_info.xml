@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_70"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/index_navi_bg"/>
+    <LinearLayout
+        android:id="@+id/view_need_offset"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/rl_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_45">
+            <ImageView
+                android:id="@+id/title_back"
+                android:layout_width="@dimen/dimen_30"
+                android:layout_height="@dimen/dimen_28"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dimen_12"
+                android:src="@drawable/backdown"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="个人资料"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_18"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/app_normal_bg_color"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/rl_user_icon_setting"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_80"
+                android:layout_marginTop="@dimen/dimen_15"
+                android:background="@color/white">
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_centerVertical="true"
+                          android:layout_marginLeft="@dimen/dimen_20"
+                          android:text="头像" android:textSize="@dimen/dimen_16"/>
+                <com.szbc.widget.iconupload.CircleImageView
+                    android:id="@+id/iv_mapdemo"
+                    android:layout_width="@dimen/dimen_60"
+                    android:layout_height="@dimen/dimen_60"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/mine_user"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:src="@drawable/right_small"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50"
+                android:layout_marginTop="2px"
+                android:background="@color/white">
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_centerVertical="true"
+                          android:layout_marginLeft="@dimen/dimen_20"
+                          android:text="账号" android:textSize="@dimen/dimen_16"/>
+                <TextView
+                    android:id="@+id/tv_person_info_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/dimen_20"
+                    android:text="13327881112" android:textSize="@dimen/dimen_16"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

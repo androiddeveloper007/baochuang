@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50"
+        android:background="@drawable/rl_selector">
+        <TextView
+            android:id="@+id/title_conf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_25"
+            android:text="奥迪"
+            android:textSize="@dimen/dimen_16"/>
+        <View
+            android:layout_alignParentBottom="true"
+            android:background="@color/font_black_6"
+            android:layout_marginRight="@dimen/dimen_20"
+            android:layout_marginLeft="@dimen/dimen_20"
+            android:layout_width="match_parent"
+            android:layout_height="1px" />
+    </RelativeLayout>
+</LinearLayout>

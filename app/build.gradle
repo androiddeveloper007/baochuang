@@ -1,0 +1,71 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'android-apt'
+android {
+    compileSdkVersion 25
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "com.szbc.android"
+        minSdkVersion 16
+        targetSdkVersion 22
+    }
+    dexOptions {
+        maxProcessCount 8
+        javaMaxHeapSize "4g"
+    }
+    signingConfigs {
+        debug {
+            storeFile file("keystore.jks")
+            storePassword '123123'
+            keyAlias 'keystore'
+            keyPassword '123123'
+        }
+        release {
+            storeFile file("keystore.jks")
+            storePassword '123123'
+            keyAlias 'keystore'
+            keyPassword '123123'
+        }
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFile 'H:/szbc_android/app/proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+        release {
+            minifyEnabled false
+            proguardFile 'H:/szbc_android/app/proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        sourceSets {
+            main {
+                jniLibs.srcDirs = ['libs']
+            }
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+    productFlavors {
+    }
+}
+dependencies {
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.0.1'
+    compile 'com.jakewharton:butterknife:8.0.1'
+    compile project(':library')
+    compile project(':pickerview')
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.6.1'
+    compile 'com.android.support:appcompat-v7:25.0.1'
+    compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.2'
+    // hide actionbar and bottom navigation
+    compile 'com.zhy:flowlayout-lib:1.0.3'
+    compile 'com.github.githubwing:ByeBurger:1.2.3'
+    // Glide
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.jzxiang.pickerview:TimePickerDialog:1.0.1'
+    compile 'com.google.code.gson:gson:2.7'
+    compile fileTree(include: '*.jar', dir: 'libs')
+    compile 'org.xutils:xutils:3.5.0'
+    compile files('libs/pinyin4j-2.5.0.jar')
+}

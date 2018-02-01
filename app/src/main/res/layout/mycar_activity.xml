@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <ImageView
+        android:id="@+id/iv_navigation_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_70"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/index_navi_bg"/>
+    <LinearLayout
+        android:id="@+id/view_need_offset"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/rl_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_45">
+            <ImageView
+                android:id="@+id/title_back"
+                android:layout_width="@dimen/dimen_30"
+                android:layout_height="@dimen/dimen_28"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dimen_12"
+                android:src="@drawable/backdown"
+                android:visibility="visible"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="我的座驾"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_18"/>
+            <ImageView
+                android:id="@+id/iv_add_car"
+                android:layout_width="@dimen/dimen_22"
+                android:layout_height="@dimen/dimen_22"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/dimen_15"
+                android:src="@drawable/addcar"
+                android:visibility="visible"/>
+        </RelativeLayout>
+        <!--<RelativeLayout
+            android:id="@+id/rl_empty_car"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+            <ImageView
+                android:id="@+id/iv_empty_myCar"
+                android:layout_width="@dimen/dimen_45"
+                android:layout_height="@dimen/dimen_45"
+                android:layout_centerInParent="true" android:src="@drawable/empty_mycar"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_empty_myCar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dimen_3"
+                android:text="您还没有任何座驾!" android:textSize="@dimen/dimen_16"/>
+        </RelativeLayout>-->
+        <!--<TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_30"
+            android:layout_marginLeft="@dimen/dimen_20"
+            android:layout_marginTop="@dimen/dimen_8"
+            android:text="默认座驾"
+            android:textColor="@color/font_black_0" android:textSize="@dimen/dimen_14.5"/>-->
+        <!--<View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/dimen_3"
+            android:layout_marginRight="@dimen/dimen_3" android:background="@color/font_black_6"/>-->
+        <com.szbc.widget.xlistview.XListView
+            android:id="@+id/lv_myCar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dimen_3"
+            android:divider="@null"
+        />
+        <!--<View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_5" android:background="@color/text_color_out"/>
+        <LinearLayout
+            android:id="@+id/ll_other_car"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_30"
+                android:layout_marginLeft="@dimen/dimen_15"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:text="其它座驾"
+                android:textColor="@color/font_black_0" android:textSize="@dimen/dimen_15"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/dimen_3"
+                android:layout_marginRight="@dimen/dimen_3" android:background="@color/font_black_4"/>
+            <ListView
+                android:id="@+id/lv_myCar_other"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></ListView>
+        </LinearLayout>-->
+    </LinearLayout>
+</RelativeLayout>

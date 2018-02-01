@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Views</string>
+
+    <string name="ytz">已投资</string>
+    <string name="wtz">未投资</string>
+
+    <string name="wsy">未收益</string>
+    <string name="ysy">已收益</string>
+</resources>

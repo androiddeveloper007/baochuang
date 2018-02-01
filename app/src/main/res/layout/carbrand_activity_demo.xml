@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_70"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/index_navi_bg"/>
+
+    <LinearLayout
+        android:id="@+id/view_need_offset"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_45">
+            <ImageView
+                android:id="@+id/title_back"
+                android:layout_width="@dimen/dimen_30"
+                android:layout_height="@dimen/dimen_28"
+                android:layout_marginLeft="@dimen/dimen_12"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/backdown"
+                android:visibility="visible"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="@dimen/dimen_13"
+                android:text="选品牌"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_18"/>
+        </RelativeLayout>
+
+
+        <ScrollView android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F4F5F5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/dimen_7"
+                    android:paddingTop="@dimen/dimen_7"
+                    android:text="A"
+                    android:textColor="@color/btn_color" android:textSize="@dimen/dimen_20"/>
+
+
+                <RelativeLayout
+                    android:id="@+id/layout_brand_a0"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_50"
+                    android:background="@drawable/rl_selector"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/iv_brand_a0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dimen_25"
+                        android:src="@mipmap/brand_a0"/>
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/dimen_25"
+                        android:text="奥迪"
+                        android:textSize="@dimen/dimen_16"/>
+
+                    <View
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/font_black_6"
+                        android:layout_marginRight="@dimen/dimen_20"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_brand_a1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_50"
+                    android:background="@drawable/rl_selector"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/iv_brand_a1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dimen_25"
+                        android:src="@mipmap/brand_a1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/dimen_25"
+                        android:text="阿斯顿.马丁"
+                        android:textSize="@dimen/dimen_16"/>
+
+                    <View
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/font_black_6"
+                        android:layout_marginRight="@dimen/dimen_20"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px" />
+                    />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_brand_a2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_50"
+                    android:background="@drawable/rl_selector"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/iv_brand_a2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dimen_25"
+                        android:src="@mipmap/brand_a3"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/dimen_25"
+                        android:text="阿尔法.罗密欧"
+                        android:textSize="@dimen/dimen_16"/>
+                    />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/dimen_7"
+                    android:paddingTop="@dimen/dimen_7"
+                    android:text="B"
+                    android:textColor="@color/btn_color" android:textSize="@dimen/dimen_20"/>
+
+
+                <RelativeLayout
+                    android:id="@+id/layout_brand_b0"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_50"
+                    android:background="@drawable/rl_selector"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/iv_brand_b0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dimen_25"
+                        android:src="@mipmap/brand_b0"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/dimen_25"
+                        android:text="布加迪.威龙"
+                        android:textSize="@dimen/dimen_16"/>
+
+                    <View
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/font_black_6"
+                        android:layout_marginRight="@dimen/dimen_20"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px" />
+                    />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_brand_b1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_50"
+                    android:background="@drawable/rl_selector"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/iv_brand_b1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dimen_25"
+                        android:src="@mipmap/brand_b1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/dimen_25"
+                        android:text="宾利"
+                        android:textSize="@dimen/dimen_16"/>
+
+                    <View
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/font_black_6"
+                        android:layout_marginRight="@dimen/dimen_20"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px" />
+                    />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_brand_b2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_50"
+                    android:background="@drawable/rl_selector"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/iv_brand_b2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dimen_25"
+                        android:src="@mipmap/brand_b2"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/dimen_25"
+                        android:text="奔驰"
+                        android:textSize="@dimen/dimen_16"/>
+
+                    <View
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/font_black_6"
+                        android:layout_marginRight="@dimen/dimen_20"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px" />
+                    />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_brand_b3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_50"
+                    android:background="@drawable/rl_selector"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/iv_brand_b3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dimen_25"
+                        android:src="@mipmap/brand_b3"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/dimen_25"
+                        android:text="宝马"
+                        android:textSize="@dimen/dimen_16"/>
+
+                    <View
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/font_black_6"
+                        android:layout_marginRight="@dimen/dimen_20"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px" />
+                    />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_brand_b4"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_50"
+                    android:background="@drawable/rl_selector"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/iv_brand_b4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dimen_25"
+                        android:src="@mipmap/brand_b4"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/dimen_25"
+                        android:text="别克"
+                        android:textSize="@dimen/dimen_16"/>
+
+                    <View
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/font_black_6"
+                        android:layout_marginRight="@dimen/dimen_20"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px" />
+                    />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_brand_b5"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_50"
+                    android:background="@drawable/rl_selector"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/iv_brand_b5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dimen_25"
+                        android:src="@mipmap/brand_b5"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/dimen_25"
+                        android:text="本田"
+                        android:textSize="@dimen/dimen_16"/>
+
+                    <View
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/font_black_6"
+                        android:layout_marginRight="@dimen/dimen_20"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px" />
+                    />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/layout_brand_b6"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_50"
+                    android:background="@drawable/rl_selector"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/iv_brand_b6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dimen_25"
+                        android:src="@mipmap/brand_b6"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="比亚迪"
+                        android:textSize="@dimen/dimen_16"/>
+
+                    <View
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/font_black_6"
+                        android:layout_marginRight="@dimen/dimen_20"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px" />
+                    />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_brand_b7"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_50"
+                    android:background="@drawable/rl_selector"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/iv_brand_b7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dimen_25"
+                        android:src="@mipmap/brand_b7"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/dimen_25"
+                        android:text="保时捷"
+                        android:textSize="@dimen/dimen_16"/>
+                    />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/dimen_7"
+                    android:paddingTop="@dimen/dimen_7"
+                    android:text="C"
+                    android:textColor="@color/btn_color" android:textSize="@dimen/dimen_20"/>
+
+
+                <RelativeLayout
+                    android:id="@+id/layout_brand_c0"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_50"
+                    android:background="@drawable/rl_selector"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/iv_brand_c0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dimen_25"
+                        android:src="@mipmap/brand_c0"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/dimen_25"
+                        android:text="长安"
+                        android:textSize="@dimen/dimen_16"/>
+                    />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/dimen_7"
+                    android:paddingTop="@dimen/dimen_7"
+                    android:text="F"
+                    android:textColor="@color/btn_color" android:textSize="@dimen/dimen_20"/>
+
+                <RelativeLayout
+                    android:id="@+id/layout_brand_f0"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_50"
+                    android:background="@drawable/rl_selector"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/iv_brand_f0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dimen_25"
+                        android:src="@mipmap/brand_f0"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/dimen_25"
+                        android:text="福特"
+                        android:textSize="@dimen/dimen_16"/>
+
+                    <View
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/font_black_6"
+                        android:layout_marginRight="@dimen/dimen_20"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px" />
+                    />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_brand_f1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_50"
+                    android:background="@drawable/rl_selector"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/iv_brand_f1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dimen_25"
+                        android:src="@mipmap/brand_f1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/dimen_25"
+                        android:text="丰田"
+                        android:textSize="@dimen/dimen_16"/>
+
+                    <View
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/font_black_6"
+                        android:layout_marginRight="@dimen/dimen_20"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px" />
+                    />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_brand_f2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_50"
+                    android:background="@drawable/rl_selector"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/iv_brand_f2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dimen_25"
+                        android:src="@mipmap/brand_f2"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/dimen_25"
+                        android:text="法拉利"
+                        android:textSize="@dimen/dimen_16"/>
+                    />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/dimen_7"
+                    android:paddingTop="@dimen/dimen_7"
+                    android:text="H"
+                    android:textColor="@color/btn_color" android:textSize="@dimen/dimen_20"/>
+
+                <RelativeLayout
+                    android:id="@+id/layout_brand_h0"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_50"
+                    android:background="@drawable/rl_selector"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/iv_brand_h0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dimen_25"
+                        android:src="@mipmap/brand_h0"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="悍马"
+                        android:textSize="@dimen/dimen_16"/>
+                    />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/dimen_7"
+                    android:paddingTop="@dimen/dimen_7"
+                    android:text="J"
+                    android:textColor="@color/btn_color" android:textSize="@dimen/dimen_20"/>
+
+                <RelativeLayout
+                    android:id="@+id/layout_brand_j0"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_50"
+                    android:background="@drawable/rl_selector"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/iv_brand_j0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dimen_25"
+                        android:src="@mipmap/brand_j0"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/dimen_25"
+                        android:text="Jeep"
+                        android:textSize="@dimen/dimen_16"/>
+                    />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/dimen_7"
+                    android:paddingTop="@dimen/dimen_7"
+                    android:text="L"
+                    android:textColor="@color/btn_color" android:textSize="@dimen/dimen_20"/>
+
+                <RelativeLayout
+                    android:id="@+id/layout_brand_l0"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_50"
+                    android:background="@drawable/rl_selector"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/iv_brand_l0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dimen_25"
+                        android:src="@mipmap/brand_l0"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/dimen_25"
+                        android:text="路虎"
+                        android:textSize="@dimen/dimen_16"/>
+                    />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

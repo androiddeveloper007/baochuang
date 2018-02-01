@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.szbc.android"
+    android:versionCode="1"
+    android:versionName="1.0"
+    android:anyDensity="true" >
+    <uses-sdk android:minSdkVersion="14"
+              android:targetSdkVersion="22" />
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- share sdk -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- share sdk end -->
+    <!--高德地图start-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!--高德地图end-->
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:supportsRtl="true"
+        android:largeHeap="true"
+        android:name="com.szbc.App" >
+
+        <!--高德地图start-->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="67757f80ba43341f2e922c24036050c9" />
+        <activity
+            android:name="com.amap.LocationModeSourceActivity"
+            android:screenOrientation="portrait" />
+        <!-- 定位需要的服务 -->
+        <service android:name="com.amap.api.location.APSService" />
+        <!--高德地图end-->
+
+        <!-- share sdk -->
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+            <!-- QQ和QQ空间分享 QQ登录的回调必须要配置的 -->
+            <intent-filter>
+                <data android:scheme="tencent100371282" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 微信分享回调 -->
+        <activity
+            android:name="com.szbc.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- share sdk end -->
+
+        <!-- -->
+        <activity
+            android:name="com.szbc.front.SplashScreen"
+            android:theme="@style/SplashTheme"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.szbc.base.MainActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.szbc.front.LoginActivity"
+            android:label="@string/Login"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:launchMode="singleTop"
+            android:theme="@style/LoginTheme"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.szbc.front.index.FourSStoreDetail"
+            android:label="@string/Login"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.szbc.base.Web"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.szbc.front.GuideActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait" />
+
+        <!--<activity
+            android:name="com.szbc.front.MapDemo"
+            android:screenOrientation="portrait" />-->
+
+        <activity
+            android:name="com.szbc.front.addcar.CarBrandActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.szbc.front.addcar.CarSeriesSelectActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.szbc.front.addcar.CarConfigerationSelectActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.szbc.front.addcar.DriveRangeAndTimeActivity"
+            android:theme="@style/DriveRangeAndTimeTheme"
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.szbc.front.addcar.OrderEditActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.szbc.front.addcar.GetAndSendCarInfoActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.szbc.front.mine.MyCarsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.szbc.front.mine.myorder.MyOrderActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <data
+                    android:host="my.host.com"
+                    android:path="/get/info"
+                    android:scheme="mzcf" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.szbc.front.mine.orderdone.MyOrderDoneActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.szbc.front.mine.AboutUsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.szbc.front.mine.orderdone.MyOrderDoneDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.szbc.front.mine.myorder.MyOrderDonePaymentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.szbc.front.mine.myorder.MyPaymentOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.szbc.front.mine.myorder.MyOrderAllHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.szbc.front.mine.popupwindow.PersonInfo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.szbc.front.mine.popupwindow.UpdatePwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.szbc.front.findLoginPwd.FindPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.szbc.front.findLoginPwd.FindPwdSMSActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.szbc.front.findLoginPwd.ResetPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.szbc.front.register.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.szbc.front.register.RegisterSetPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.szbc.front.register.RegisterSmsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.szbc.front.mine.myorder.ContractSigningActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name="com.szbc.widget.iconupload.ClipImageActivity"/>
+        <activity android:name="com.szbc.base.WebViewRelease"/>
+        <activity android:name="com.szbc.front.index.CitySelectionActivity"/>
+
+        <!--高德地图start-->
+        <!--高德地图end-->
+
+        <!--第三方登录-->
+
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:noHistory="true"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="tencent1105023417" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.tencent.connect.common.AssistActivity"
+                  android:theme="@android:style/Theme.Translucent.NoTitleBar"
+                  android:configChanges="orientation|keyboardHidden|screenSize"
+        />
+
+        <!--支付宝-->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" >
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" >
+        </activity>
+        <!-- 填写您从Mob开发者后台中得到的Appkey和AppSecret -->
+        <meta-data android:name="Mob-AppKey" android:value="1f2f8f3e8d7ee"/>
+        <meta-data android:name="Mob-AppSecret" android:value="2198abdf196f190a7d4255619eed6e50"/>
+    </application>
+
+</manifest>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_75"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/index_navi_bg"/>
+
+    <LinearLayout
+        android:id="@+id/view_need_offset"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+    <RelativeLayout
+        android:id="@+id/rl_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_45">
+        <ImageView
+            android:id="@+id/title_back"
+            android:layout_width="@dimen/dimen_30"
+            android:layout_height="@dimen/dimen_28"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dimen_12"
+            android:src="@drawable/backdown"
+            android:visibility="visible"/>
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="导航"
+            android:textColor="@color/white"
+            android:layout_marginBottom="@dimen/dimen_13"
+            android:textSize="@dimen/dimen_18"/>
+    </RelativeLayout>
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" android:layout_weight="1"/>
+
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_70"
+        android:padding="@dimen/dimen_5"
+        android:background="@drawable/bg_bottom_bar"
+        android:gravity="center_vertical"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/firstline"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_35"
+            android:layout_marginLeft="@dimen/dimen_12"
+            android:singleLine="true"
+            android:textColor="#333333"
+            android:text="正在计算路线，请稍等。"
+            android:textSize="@dimen/dimen_14" />
+
+        <TextView
+            android:id="@+id/secondline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/firstline"
+            android:layout_marginLeft="@dimen/dimen_12"
+            android:gravity="right"
+            android:singleLine="true"
+            android:textColor="#999999"
+            android:textSize="13sp"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/detail"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_35"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="导航"
+                android:textColor="@color/blue"
+                android:textSize="14sp" />
+
+            <Button
+                android:layout_width="@dimen/dimen_7"
+                android:layout_height="@dimen/dimen_13"
+                android:layout_marginLeft="@dimen/dimen_4"
+                android:background="@drawable/arrow_right_blue"
+                android:gravity="center_vertical" />
+        </LinearLayout>
+    </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

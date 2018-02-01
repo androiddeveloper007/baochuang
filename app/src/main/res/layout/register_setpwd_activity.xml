@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_70"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/index_navi_bg"/>
+
+    <LinearLayout
+        android:id="@+id/view_need_offset"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_45">
+            <ImageView
+                android:id="@+id/title_back"
+                android:layout_width="@dimen/dimen_30"
+                android:layout_height="@dimen/dimen_28"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dimen_12"
+                android:src="@drawable/backdown"
+                android:visibility="visible"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="设置密码"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_18"/>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/app_normal_bg_color"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_48"
+                android:layout_marginLeft="@dimen/dimen_50"
+                android:layout_marginRight="@dimen/dimen_50"
+                android:layout_marginTop="@dimen/dimen_35"
+                android:background="@drawable/rl_radius_fivedp">
+
+                <TextView
+                    android:id="@+id/tv_register_setpwd"
+                    android:layout_width="@dimen/dimen_80"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center"
+                    android:text="设置密码:"
+                    android:textSize="@dimen/dimen_15"/>
+
+                <com.szbc.widget.MClearEditText
+                    android:id="@+id/et_register_setpwd"
+                    android:layout_width="@dimen/dimen_200"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dimen_5"
+                    android:layout_toRightOf="@+id/tv_register_setpwd"
+                    android:background="@null"
+                    android:focusable="true"
+                    android:hint="字母加数字至少8位"
+                    android:inputType="textPassword"
+                    android:paddingRight="@dimen/dimen_15"
+                    android:singleLine="true"
+                    android:textColorHint="#cccccc"
+                    android:textCursorDrawable="@drawable/text_cursor"
+                    android:textSize="@dimen/dimen_15"
+                />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_48"
+                android:layout_marginLeft="@dimen/dimen_50"
+                android:layout_marginRight="@dimen/dimen_50"
+                android:layout_marginTop="@dimen/dimen_35"
+                android:background="@drawable/rl_radius_fivedp">
+
+                <TextView
+                    android:id="@+id/tv_register_setpwd_again"
+                    android:layout_width="@dimen/dimen_80"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center"
+                    android:text="确认密码:"
+                    android:textSize="@dimen/dimen_15"/>
+
+                <com.szbc.widget.MClearEditText
+                    android:id="@+id/et_register_setpwd_again"
+                    android:layout_width="@dimen/dimen_200"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dimen_5"
+                    android:layout_toRightOf="@+id/tv_register_setpwd_again"
+                    android:background="@null"
+                    android:focusable="true"
+                    android:hint="确认您输入的密码"
+                    android:inputType="textPassword"
+                    android:paddingRight="@dimen/dimen_15"
+                    android:singleLine="true"
+                    android:textColorHint="#cccccc"
+                    android:textCursorDrawable="@drawable/text_cursor"
+                    android:textSize="@dimen/dimen_15"
+                />
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/ll_register_submit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_48"
+                android:layout_marginLeft="@dimen/dimen_50"
+                android:layout_marginRight="@dimen/dimen_50"
+                android:layout_marginTop="@dimen/dimen_35"
+                android:background="@drawable/button_normal"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="注册"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/dimen_18"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
